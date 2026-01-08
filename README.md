@@ -1,6 +1,6 @@
-# SplitPDF
+# Split PDF (Finder)
 
-A macOS micro-utility that adds a Finder context menu action to split PDF files into individual pages.
+Split PDFs into individual pages — directly from Finder.
 
 ## Features
 
@@ -24,18 +24,18 @@ Given a source file named `Report.pdf`:
 ## Requirements
 
 - macOS 13.0 or later
-- Finder extension must be enabled in System Settings
+- Service must be enabled in System Settings (see below)
 
 ## Building
 
 Open `SplitPDF/SplitPDF.xcodeproj` in Xcode and build the project.
 
-## Enabling the Extension
+## Enabling the Service
 
 After installing:
 1. Open System Settings
-2. Go to Privacy & Security > Extensions > Finder Extensions
-3. Enable "SplitPDF Extension"
+2. Go to Keyboard > Keyboard Shortcuts > Services
+3. Enable "Split into Pages" under Files and Folders
 
 ## License
 

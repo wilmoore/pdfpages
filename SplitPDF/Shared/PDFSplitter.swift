@@ -82,7 +82,7 @@ class PDFSplitter {
         // Show completion notification
         if successCount == pageCount {
             showNotification(
-                title: "SplitPDF",
+                title: "Split PDF (Finder)",
                 body: "PDF split into \(pageCount) pages\nSaved to: \(baseName) Pages"
             )
         } else {

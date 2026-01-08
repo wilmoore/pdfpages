@@ -1,0 +1,5 @@
+# Build artifacts - do not commit
+*.zip
+*.app
+.build/
+.staging/
