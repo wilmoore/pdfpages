@@ -1,5 +1,5 @@
 {
-  "lastSequence": 10,
+  "lastSequence": 11,
   "items": [
     {
       "id": 1,
@@ -156,6 +156,18 @@
       "sourceBranch": null,
       "createdAt": "2026-01-01T00:00:00.000Z",
       "status": "open"
+    },
+    {
+      "id": 11,
+      "title": "Rebrand to Split PDF (Finder)",
+      "description": "Rebrand app display name and user-facing text to 'Split PDF (Finder)'. Updates README, notification titles, and extension display names. Preserves bundle IDs and internal structure for stability.",
+      "category": "chore",
+      "severity": "medium",
+      "fingerprint": "chore|11|rebrand-split-pdf-finder",
+      "source": "/pro:chore",
+      "sourceBranch": "chore/rebrand-split-pdf-finder",
+      "createdAt": "2026-01-07T00:00:00.000Z",
+      "status": "in-progress"
     }
   ]
 }
