@@ -1,3 +1,4 @@
+import AppKit
 import Foundation
 import PDFKit
 import UserNotifications
@@ -60,21 +61,30 @@ class PDFSplitter {
             return
         }
 
-        // Split each page into a separate PDF
+        // Get output format preference
+        let outputFormat = Preferences.shared.outputFormat
+        let fileExtension = outputFormat.fileExtension
+
+        // Split each page into separate files
         var successCount = 0
         for pageIndex in 0..<pageCount {
             guard let page = pdfDocument.page(at: pageIndex) else {
                 continue
             }
 
-            let singlePageDocument = PDFDocument()
-            singlePageDocument.insert(page, at: 0)
-
             let pageNumber = pageIndex + 1
-            let outputFileName = "\(baseName)_Page_\(pageNumber).pdf"
+            let outputFileName = "\(baseName)_Page_\(pageNumber).\(fileExtension)"
             let outputURL = outputDirectory.appendingPathComponent(outputFileName)
 
-            if singlePageDocument.write(to: outputURL) {
+            let success: Bool
+            switch outputFormat {
+            case .pdf:
+                success = writePDFPage(page, to: outputURL)
+            case .png:
+                success = writePNGPage(page, to: outputURL)
+            }
+
+            if success {
                 successCount += 1
             }
         }
@@ -106,5 +116,59 @@ class PDFSplitter {
         )
 
         UNUserNotificationCenter.current().add(request) { _ in }
+    }
+
+    // MARK: - Output Writers
+
+    private func writePDFPage(_ page: PDFPage, to url: URL) -> Bool {
+        let singlePageDocument = PDFDocument()
+        singlePageDocument.insert(page, at: 0)
+        return singlePageDocument.write(to: url)
+    }
+
+    private func writePNGPage(_ page: PDFPage, to url: URL) -> Bool {
+        let pageBounds = page.bounds(for: .mediaBox)
+
+        // Render at 2x for Retina quality (144 DPI)
+        let scale: CGFloat = 2.0
+        let width = Int(pageBounds.width * scale)
+        let height = Int(pageBounds.height * scale)
+
+        guard let colorSpace = CGColorSpace(name: CGColorSpace.sRGB),
+              let context = CGContext(
+                  data: nil,
+                  width: width,
+                  height: height,
+                  bitsPerComponent: 8,
+                  bytesPerRow: 0,
+                  space: colorSpace,
+                  bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+              ) else {
+            return false
+        }
+
+        // Fill with white background
+        context.setFillColor(CGColor.white)
+        context.fill(CGRect(x: 0, y: 0, width: width, height: height))
+
+        // Scale and draw the page
+        context.scaleBy(x: scale, y: scale)
+        page.draw(with: .mediaBox, to: context)
+
+        guard let cgImage = context.makeImage() else {
+            return false
+        }
+
+        let bitmapRep = NSBitmapImageRep(cgImage: cgImage)
+        guard let pngData = bitmapRep.representation(using: .png, properties: [:]) else {
+            return false
+        }
+
+        do {
+            try pngData.write(to: url)
+            return true
+        } catch {
+            return false
+        }
     }
 }

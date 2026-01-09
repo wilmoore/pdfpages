@@ -60,9 +60,10 @@
       "fingerprint": "spec|spec-001|epic|e004-error-handling",
       "source": "/pro:spec.import",
       "sourceSpec": "spec-001",
-      "sourceBranch": null,
+      "sourceBranch": "feat/error-handling-and-preferences",
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "status": "open"
+      "status": "resolved",
+      "resolvedAt": "2026-01-09T04:04:02.000Z"
     },
     {
       "id": 5,
@@ -75,9 +76,10 @@
       "fingerprint": "spec|spec-001|epic|e005-preferences",
       "source": "/pro:spec.import",
       "sourceSpec": "spec-001",
-      "sourceBranch": null,
+      "sourceBranch": "feat/error-handling-and-preferences",
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "status": "open"
+      "status": "resolved",
+      "resolvedAt": "2026-01-09T04:04:02.000Z"
     },
     {
       "id": 6,
@@ -138,9 +140,10 @@
       "fingerprint": "spec|spec-001|story|us004-error-notification",
       "source": "/pro:spec.import",
       "sourceSpec": "spec-001",
-      "sourceBranch": null,
+      "sourceBranch": "feat/error-handling-and-preferences",
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "status": "open"
+      "status": "resolved",
+      "resolvedAt": "2026-01-09T04:04:02.000Z"
     },
     {
       "id": 10,
@@ -153,9 +156,10 @@
       "fingerprint": "spec|spec-001|story|us005-output-format",
       "source": "/pro:spec.import",
       "sourceSpec": "spec-001",
-      "sourceBranch": null,
+      "sourceBranch": "feat/error-handling-and-preferences",
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "status": "open"
+      "status": "resolved",
+      "resolvedAt": "2026-01-09T04:04:02.000Z"
     },
     {
       "id": 11,

@@ -6,7 +6,7 @@ struct SplitPDFApp: App {
 
     var body: some Scene {
         Settings {
-            EmptyView()
+            PreferencesView()
         }
     }
 }

@@ -19,3 +19,4 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 ## Index
 
 - [001. Use Services Menu Instead of Finder Sync Extension](001-use-services-menu-instead-of-finder-sync-extension.md)
+- [002. Preferences with UserDefaults and PNG Export](002-preferences-with-userdefaults-and-png-export.md)

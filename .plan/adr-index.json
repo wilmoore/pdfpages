@@ -1,9 +1,13 @@
 {
-  "lastSequence": 1,
+  "lastSequence": 2,
   "entries": [
     {
       "branch": "mvp/splitpdf",
       "adrs": ["001-use-services-menu-instead-of-finder-sync-extension.md"]
+    },
+    {
+      "branch": "feat/error-handling-and-preferences",
+      "adrs": ["002-preferences-with-userdefaults-and-png-export.md"]
     }
   ]
 }

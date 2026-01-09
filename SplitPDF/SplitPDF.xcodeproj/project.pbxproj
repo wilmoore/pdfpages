@@ -11,6 +11,8 @@
 		5434BEF7E24EA59E194DC864 /* PDFSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBCB2B5393195FF8C0354C7 /* PDFSplitter.swift */; };
 		7C8F42D596C40AECB0FE16E3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819531A63B6F7CAA58E387C1 /* UserNotifications.framework */; };
 		82AB5BD97874C3E19B2BAF9B /* SplitPDFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E5234F19D2E5ECB690DDD /* SplitPDFApp.swift */; };
+		881837D492A9DB462E045C08 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BA376A96580C9182D5E73A /* Preferences.swift */; };
+		A0C41DDBE3C9C9E4BF0AD505 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6272A29E70C3C86C1DC6A14 /* PreferencesView.swift */; };
 		FA6B615A2D4DCD6E8A95E9B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F105CDFAAF89E5B3B9BAAB /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +24,9 @@
 		413E5234F19D2E5ECB690DDD /* SplitPDFApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitPDFApp.swift; sourceTree = "<group>"; };
 		49651DF70E1061B62C49EA36 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		819531A63B6F7CAA58E387C1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		83BA376A96580C9182D5E73A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		97CBE07422DAABA45FD08494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F6272A29E70C3C86C1DC6A14 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				2FBCB2B5393195FF8C0354C7 /* PDFSplitter.swift */,
+				83BA376A96580C9182D5E73A /* Preferences.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 			children = (
 				38F105CDFAAF89E5B3B9BAAB /* AppDelegate.swift */,
 				97CBE07422DAABA45FD08494 /* Info.plist */,
+				F6272A29E70C3C86C1DC6A14 /* PreferencesView.swift */,
 				25AFA4E967173E5D608C56AE /* SplitPDF.entitlements */,
 				413E5234F19D2E5ECB690DDD /* SplitPDFApp.swift */,
 			);
@@ -146,6 +152,8 @@
 			files = (
 				FA6B615A2D4DCD6E8A95E9B5 /* AppDelegate.swift in Sources */,
 				5434BEF7E24EA59E194DC864 /* PDFSplitter.swift in Sources */,
+				881837D492A9DB462E045C08 /* Preferences.swift in Sources */,
+				A0C41DDBE3C9C9E4BF0AD505 /* PreferencesView.swift in Sources */,
 				82AB5BD97874C3E19B2BAF9B /* SplitPDFApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
