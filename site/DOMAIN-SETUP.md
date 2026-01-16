@@ -1,4 +1,4 @@
-# Custom Domain Setup for splitpdf.app
+# Custom Domain Setup for splitpdf.fyi
 
 ## 1. Configure DNS Records
 
@@ -32,7 +32,7 @@ git push
 ## 3. Verify in GitHub
 
 1. Go to https://github.com/wilmoore/splitpdf/settings/pages
-2. Under "Custom domain", enter `splitpdf.app`
+2. Under "Custom domain", enter `splitpdf.fyi`
 3. Click Save
 4. Wait for DNS check to pass
 5. Enable "Enforce HTTPS"
@@ -42,7 +42,7 @@ git push
 After DNS propagates (up to 24-48 hours):
 
 ```bash
-curl -I https://splitpdf.app
+curl -I https://splitpdf.fyi
 ```
 
 Should return `HTTP/2 200`.
