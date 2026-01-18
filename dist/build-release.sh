@@ -4,7 +4,7 @@
 #
 # Usage: ./build-release.sh
 #
-# Output: Split PDF (Finder).zip in the dist/ folder
+# Output: PDF Pages (Finder).zip in the dist/ folder
 #
 
 set -e
@@ -12,7 +12,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 DIST_DIR="$SCRIPT_DIR"
-APP_NAME="Split PDF (Finder)"
+APP_NAME="PDF Pages (Finder)"
 SCHEME="SplitPDF"
 
 echo "Building release..."

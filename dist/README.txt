@@ -1,4 +1,4 @@
-Split PDF (Finder)
+PDF Pages (Finder)
 ==================
 
 Split PDFs into individual pages — directly from Finder.
@@ -8,7 +8,7 @@ No apps to learn. No files uploaded. Works entirely on your Mac.
 INSTALLATION
 ------------
 
-1. Drag "Split PDF (Finder).app" to your Applications folder
+1. Drag "PDF Pages (Finder).app" to your Applications folder
 
 2. Double-click the app once to register the Finder service
 
