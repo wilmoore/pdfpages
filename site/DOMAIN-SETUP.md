@@ -11,8 +11,9 @@ A       @       185.199.108.153
 A       @       185.199.109.153
 A       @       185.199.110.153
 A       @       185.199.111.153
-CNAME   www     wilmoore.github.io
 ```
+
+Note: Bare domain only (no www subdomain).
 
 ## 2. Enable CNAME in the repo
 
